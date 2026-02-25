@@ -6,9 +6,14 @@ Welcome to **Netflix Cards Explorer**! A sleek and responsive React application 
 
 - **Dynamic Content**: Series data is dynamically rendered from a structured JSON dataset.
 - **Rich Details**: View series ratings, summaries, cast members, and genres at a glance.
+- **🌙 Dark Mode Toggle**:
+    - A fixed pill-shaped toggle button at the top-right corner lets you switch between **Light** and **Dark** themes.
+    - Smooth CSS transitions on all cards, text, and backgrounds.
+    - Dark theme uses deep navy backgrounds with soft, readable text colors.
+    - Button label updates dynamically: `🌙 Dark Mode` ↔ `☀️ Light Mode`.
 - **Interactive UI**:
-    - Smooth hover effects on buttons.
-    - Beautiful gradient backgrounds for cards.
+    - Smooth hover effects on buttons and cards.
+    - Beautiful gradient backgrounds (light & dark variants).
     - Responsive grid layout for all screen sizes.
 - **Direct Streaming Integration**: "Watch Now" buttons link directly to Netflix or Viki for immediate viewing.
 
@@ -16,7 +21,8 @@ Welcome to **Netflix Cards Explorer**! A sleek and responsive React application 
 
 - **Frontend Library**: [React 19](https://react.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/) - for lightning-fast development.
-- **Styling**: Custom CSS3 with modern features (Flexbox, Gradients, Shadows) & Tailwind CSS integration.
+- **Styling**: Custom CSS3 with modern features (Flexbox, Gradients, Shadows, CSS class-based theming).
+- **State Management**: React `useState` hook for theme toggling.
 - **Data Management**: JSON-based data storage for easy updates.
 
 ## 📦 Installation & Setup
@@ -46,6 +52,7 @@ Welcome to **Netflix Cards Explorer**! A sleek and responsive React application 
 5. **Open your browser**
    Visit `http://localhost:5173` to see the app in action!
 
+
 ## 📂 Project Structure
 
 ```
@@ -54,9 +61,9 @@ netflix_cards/
 ├── src/
 │   ├── api/             # Data sources (seriesData.json)
 │   ├── components/      # Reusable components (NetflixSeries.jsx)
-│   ├── App.jsx          # Main application component
+│   ├── App.jsx          # Main application component (dark mode state)
 │   ├── main.jsx         # Entry point
-│   └── index.css        # Global styles
+│   └── index.css        # Global styles + dark mode theming
 ├── index.html           # HTML template
 └── package.json         # Project dependencies
 ```
