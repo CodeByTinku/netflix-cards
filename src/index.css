@@ -9,7 +9,72 @@ body{
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
+  padding-top: 5rem;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
 }
+
+/* Dark Toggle Button */
+.darkToggleBtn {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1000;
+  background: #1e293b;
+  color: #f1f5f9;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.darkToggleBtn:hover {
+  transform: scale(1.07);
+  background: #0f172a;
+}
+
+/* ====== DARK MODE ====== */
+.dark {
+  background-color: #0f172a !important;
+  color: #e2e8f0;
+}
+.dark .darkToggleBtn {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+.dark .darkToggleBtn:hover {
+  background: #e2e8f0;
+}
+.dark .mainDiv {
+  background: linear-gradient(135deg, #1e293b 0%, #1a2540 100%);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.dark .seriesName {
+  color: #818cf8;
+}
+.dark .seriesRating {
+  color: #60a5fa;
+}
+.dark .seriesSummary {
+  color: #cbd5e1;
+}
+.dark .seriesGenre,
+.dark .seriesCast {
+  color: #94a3b8;
+}
+.dark .watchBtn {
+  background: #4f46e5;
+  box-shadow: 0 2px 8px rgba(79,70,229,0.35);
+}
+.dark .watchBtn:hover {
+  background: #4338ca;
+}
+
 .mainDiv {
   max-width: 420px;
   margin: 40px;
